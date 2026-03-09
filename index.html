@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bende Town Investment Forum</title>
+    <style>
+        /* CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background: #121212;
+            color: #e0e0e0;
+        }
+        header {
+            background: #006400; /* Dark green */
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        section {
+            padding: 4rem 2rem;
+            min-height: 100vh;
+        }
+        #hero {
+            background: url('https://source.unsplash.com/random/1600x900/?nigeria,landscape') no-repeat center/cover;
+            color: white;
+            text-align: center;
+            padding-top: 6rem;
+        }
+        #hero h1 {
+            font-size: 3rem;
+        }
+        .btn {
+            background: #006400;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .dark-mode input, .dark-mode textarea {
+            background: #333;
+            color: #e0e0e0;
+            border-color: #555;
+        }
+        footer {
+            background: #006400;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #006400;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Bende Town Investment Forum</h2>
+        <nav>
+            <div class="menu-toggle">&#9776;</div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#opportunities">Opportunities</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="dark-mode-toggle">Dark Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Welcome to Bende Town Investment Forum</h1>
+        <p>Unlocking opportunities for growth and prosperity in Bende Town, Abia State, Nigeria.</p>
+        <a href="#contact" class="btn">Get Involved</a>
+    </section>
+
+    <section id="about">
+        <h2>About the Forum</h2>
+        <p>The Bende Town Investment Forum is a platform dedicated to promoting sustainable investments in Bende Town and surrounding areas in Abia State. With a focus on economic development, we connect investors, entrepreneurs, and local stakeholders to foster innovation in agriculture, real estate, tourism, and infrastructure. Inspired by Abia's growing business environment under leaders like Governor Alex Otti, we aim to create jobs, empower communities, and drive long-term prosperity.</p>
+        <img src="https://source.unsplash.com/random/800x400/?investment,forum" alt="Forum Overview" style="width:100%; max-width:800px; display:block; margin:1rem auto;">
+    </section>
+
+    <section id="opportunities">
+        <h2>Investment Opportunities</h2>
+        <ul>
+            <li><strong>Agriculture</strong>: Invest in palm oil, cassava, and livestock farming with high yields in Bende's fertile lands.</li>
+            <li><strong>Real Estate</strong>: Develop residential and commercial properties in this emerging hub.</li>
+            <li><strong>Tourism</strong>: Explore eco-tourism and cultural sites for hospitality ventures.</li>
+            <li><strong>Infrastructure</strong>: Partner in roads, energy, and tech projects to support regional growth.</li>
+        </ul>
+        <img src="https://source.unsplash.com/random/800x400/?nigeria,agriculture" alt="Investment Opportunities" style="width:100%; max-width:800px; display:block; margin:1rem auto;">
+    </section>
+
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <p>Join us for workshops, summits, and networking sessions:</p>
+        <ul>
+            <li>Annual Investment Summit - Q2 2026</li>
+            <li>Webinar on Sustainable Farming - Monthly</li>
+            <li>Business Roundtable with Abia Stakeholders - Ongoing</li>
+        </ul>
+        <a href="#contact" class="btn">Register for Updates</a>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Bende Town Investment Forum. All rights reserved.</p>
+        <p>Follow us: <a href="https://x.com/RealKraftig" style="color:white;">@RealKraftig</a> | Email: info@bendetowninvest.com</p>
+    </footer>
+
+    <script>
+        // JavaScript for interactivity
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUl = document.querySelector('nav ul');
+        menuToggle.addEventListener('click', () => {
+            navUl.classList.toggle('active');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+        });
+
+        // Basic form validation
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            if (!name || !email || !message) {
+                alert('Please fill all fields.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+  </html>
